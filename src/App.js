@@ -11,9 +11,24 @@ class App extends Component {
       cityLon: '',
       cityLat: ''
     }
+
   }
        
+  handleGetNashville = async () => {
+      console.log("click");
+      let result = await
+axios.get(`https://us1.locationiq.com/v1/search?key=${location_IQ_API_KEY}&q=nashville&format=json`);
+      let data = result.data;
+      console.log (data);
+      this.setState({
+        citydisplayName:
+      data[1].display_name,
+        cityLat: data[1].lat,
+        cityLon: data[1].lon
 
+
+      });
+  }
 };
 
 
