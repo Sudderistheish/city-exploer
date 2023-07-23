@@ -92,12 +92,15 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 Time Estimates
 For each of the lab features, make an estimate of the time it will take you to complete the feature, and record your start and finish times for that feature:
 
-Name of feature: ________________________________
+Name of feature: __City portfolio______________________________
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: _72 hrs____
 
-Start time: _____
+Start time: _12:15pm____
 
 Finish time: _____
 
 Actual time needed to complete: _____
+ Diagram data flow drawing
+https://1drv.ms/w/s!AuA28EkHgjmNhQ5K3JLBCjQyyuCk?e=0QQBOX
+https://docs.google.com/drawings/d/1uoreC5acksDKCOOO-lLftZlko6kDIxp0V1UZCixaFTI/edit?usp=sharing
