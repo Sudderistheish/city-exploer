@@ -1,19 +1,23 @@
 import React from "react";
 import axios from "axios";
 
-const LocationIQ = "pk.b99b913e08dd28f0dbe4264e6d67b898";
-class App extends Component {
+const location_IQ_API_KEY = process.env.REACT_APP_LOCATIONIQ;
+class App extends React.Component {
   constructor() {
     super();
     this.state = {
       cityDisplayName: "",
       cityLon: "",
       cityLat: "",
+      imgPath: "",
     };
   }
 
-  handleGetNashville = async () => {
+  handleGetCity = async () => {
     console.log("click");
+    console.log(
+      `https://us1.locationiq.com/v1/search?key=${location_IQ_API_KEY}&q=nashville&format=json`
+    );
     let result = await axios.get(
       `https://us1.locationiq.com/v1/search?key=${location_IQ_API_KEY}&q=nashville&format=json`
     );
@@ -32,10 +36,7 @@ class App extends Component {
         <h3>{this.state.cityDisplayName}</h3>
         <p>latitude {this.state.cityLat}</p>
         <p>longitude {this.state.cityLon}</p>
-        <img
-          src={`https://maps.location.com/v3/staticmap?key=${location_IQ_API_KEY}&center=${this.state.cityLat},${this.state.cityLon}&zoom=18`}
-          alt="City Map"
-        />
+        <img src={this.state.imgPath} alt="City Map" />
         <button onClick={this.handleGetCity}>get City Data</button>
       </>
     );
